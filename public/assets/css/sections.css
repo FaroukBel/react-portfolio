@@ -1,0 +1,6 @@
+.main-section{
+    background-image: url("/assets/svg/main-bg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { useEffect, useState } from "react";
+import Home from "./pages/Home";
+import NavBar from "./components/NavBar";
+import Spinner from "./components/Spinner";
 function App() {
+  const [counter, setCounter] = useState(0);
+
+  useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+  }, [counter]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {counter > 0 && <Spinner></Spinner>}
+      {counter == 0 && (
+        <>
+          <header className="App-header overflow-hidden">
+            <NavBar></NavBar>
+          </header>
+          <Home></Home>
+        </>
+      )}
     </div>
   );
 }
