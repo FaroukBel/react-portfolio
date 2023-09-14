@@ -1,7 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
 import Home from "./pages/Home";
-import NavBar from "./components/NavBar";
 import Spinner from "./components/Spinner";
 function App() {
   const [counter, setCounter] = useState(0);
@@ -15,9 +14,7 @@ function App() {
       {counter > 0 && <Spinner></Spinner>}
       {counter == 0 && (
         <>
-          <header className="App-header overflow-hidden">
-            <NavBar></NavBar>
-          </header>
+         
           <Home></Home>
         </>
       )}

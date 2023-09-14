@@ -7,6 +7,8 @@ body {
 overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding: 40px;
 }
 
 a {

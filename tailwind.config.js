@@ -29,6 +29,9 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
     extend: {
+      transitionProperty: {
+        'height': 'height'
+      },
       spacing: {
         '128': '32rem',
         '144': '36rem',
