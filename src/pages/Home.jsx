@@ -99,21 +99,22 @@ const Home = () => {
   return (
     <>
       <Parallax pages={3}>
-        <ParallaxLayer offset={0} factor={1.5} speed={1}>
-          <section className="main-section mb-5">
+        <ParallaxLayer  speed={1}>
+          <section className="main-section h-screen mb-5">
             <div className="container  mx-auto">
-              <div className="grid  grid-cols-1 md:grid-cols-2">
+              <div className="grid p-10  grid-cols-1 md:grid-cols-2">
                 <div className="title  flex items-center justify-center">
                   <div className="relative">
                     <Reveal>
-                      <h1 className="relative font-bold text-8xl  z-10">
+                      <h1 className="relative  font-black text-8xl  z-10" style={{letterSpacing:"-3px", lineHeight:"74px"}}>
+                      hi i'm a<br/>
                         full-<span className="text-sea-blue">stack</span> <br />
                         developer
                       </h1>
-                      <div className="absolute grid grid-rows-1 gap-2 -right-12 -top-8 z-0">
-                        <div className="w-24 h-6 rounded-lg bg-gray-light peer-[:has(#design-stack)]:bg-sea-blue"></div>
-                        <div className="w-24 h-6 rounded-lg bg-gray-light"></div>
-                        <div className="w-24 h-6 rounded-lg bg-gray-light"></div>
+                      <div className="absolute grid grid-rows-1 gap-2 -right-4 top-14 z-0">
+                        <div className="w-24 h-6 rounded-lg bg-gray-light " id="design-stack"></div>
+                        <div className="w-24 h-6 rounded-lg bg-gray-light" id="front-stack"></div>
+                        <div className="w-24 h-6 rounded-lg bg-gray-light" id="back-stack"></div>
                       </div>
                     </Reveal>
 
@@ -122,7 +123,7 @@ const Home = () => {
                         <a href="#design-phase">
                           {" "}
                           <h2
-                            id="design-stack"
+                            id="design-text"
                             className=" text-gray-light relative z-40 font-bold text-4xl peer/design  transition ease-in-out duration-300 hover:text-white"
                           >
                             design
@@ -131,23 +132,25 @@ const Home = () => {
                         </a>
                       </div>
                       <div>
-                        <h2 className="text-gray-light relative z-40 font-bold text-4xl hover:text-sea-blue transition ease-in-out delay-150">
+
+                        <h2 
+                        id="front-text" className="text-gray-light relative z-40 font-bold text-4xl hover:text-sea-blue transition ease-in-out delay-150">
                           front-end
                         </h2>
                       </div>
                       <div>
-                        <h2 className="text-gray-light relative z-40 font-bold text-4xl hover:text-sea-blue transition ease-in-out delay-150">
+                        <h2 id="back-text" className="text-gray-light relative z-40 font-bold text-4xl hover:text-sea-blue transition ease-in-out delay-150">
                           back-end
                         </h2>
                       </div>
                     </Reveal>
                   </div>
                 </div>
-                <div className="">
-                  <img src="/logo512.png" alt="" />
+                <div className="flex justify-center items-center">
+                  <img src="/assets/img/Me-png-edited.png" alt=""  height={400} width={400}/>
                 </div>
               </div>
-              <div className="h-28"></div>
+              
             </div>
 
             <div className="sliderContainer my-5">
@@ -243,7 +246,7 @@ const Home = () => {
             </div>
           </section>
         </ParallaxLayer>
-        <ParallaxLayer offset={1.8} speed={0.5}>
+        <ParallaxLayer offset={1.5}  speed={0.5}>
           <section className="front-section">
             <div className="container  mx-auto">
               <Reveal>

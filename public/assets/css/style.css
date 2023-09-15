@@ -92,3 +92,9 @@ h2{
     left: 100%;
     top: 0;
   }
+
+
+  #design-stack:hover ~ div a #design-text {
+  
+    background-color: aqua !important;
+}
